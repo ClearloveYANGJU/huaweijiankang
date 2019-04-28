@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>Hello MUI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+		<script type="text/javascript" src="js/swiper.min.js"></script>
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<style type="text/css">
+			html,
+			body {
+				position: relative;
+				height: 100%;
+			}
+			
+			body {
+				background: #eee;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+			}
+			
+			.swiper-container {
+				width: 100%;
+				height: 100%;
+				background: #fff;
+			}
+			
+			.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				height: 145px;
+				/*background: pink;*/
+				display: -webkit-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+				-webkit-box-pack: center;
+				-ms-flex-pack: center;
+				-webkit-justify-content: center;
+				justify-content: center;
+				-webkit-box-align: center;
+				-ms-flex-align: center;
+				-webkit-align-items: center;
+				align-items: center;
+			}
+			
+			.swiper-slide a img {
+				display: block;
+				margin: 0 5px;
+				/*width: 100%;*/
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--下拉刷新容器-->
+		<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<ul class="mui-table-view mui-table-view-chevron yjMain">
+					<h1>
+						<a href="#"><span class="mui-icon mui-icon-contact mui-pull-left"></span></a>
+						<a href="#"><img src="img/lv.png"/></a>
+						<a href="#"><span class="mui-icon mui-icon mui-icon-plusempty mui-pull-right"></span></a>
+						<a href="#"><img src="img/kk.png" class="mui-pull-right"/></a>
+					</h1>
+				</ul>
+				<div class="mui-content yjImg">
+					<img src="img/shuju.png" />
+					<img src="img/yundong.png" />
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#"><img src="img/01.png" /></a>
+							<a href="#"><img src="img/02.png" /></a>
+							<a href="#"><img src="img/03.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/04.png" /></a>
+							<a href="#"><img src="img/05.png" /></a>
+							<a href="#"><img src="img/06.png" /></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><img src="img/05.png" /></a>
+							<a href="#"><img src="img/06.png" /></a>
+							<a href="#"><img src="img/07.png" /></a>
+						</div>
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="yjBox">
+					<div class="yjBushu">
+						<p>步数</p>
+						<a href="#" class="mui-pull-right">更多<span class="mui-icon mui-icon-arrowright mui-pull-right"></span></a>
+					</div>
+					<div class="yjLi">
+						<ul>
+							<li>
+								目标达成
+								<p>5天</p>
+							</li>
+							<i></i>
+							<li>
+								日均步数
+								<p>8,564步</p>
+							</li>
+						</ul>
+						<div id="main" style="width: 100%;height: 400px;"></div>
+						<script type="text/javascript">
+							var myChart = echarts.init($("#main")[0]);
+							//图表中的配置与数据
+							var options = {
+								// 二.提示框组件
+								tooltip: {
+									show: true,
+									trigger: "item",
+									axisPointer: {
+										type: "cross",
+									},
+									extraCsstext: "box-shadow:0 0 30px rgba(100,100,100,0.3)"
+								},
+								// 三.图例
+								// 四.直角坐标系中绘制网格
+								//								grid: {
+								//									show: true,
+								//									containLabel: false,
+								//								},
+								xAxis: {
+									// 1.类目
+									type: "category",
+									//2.坐标轴的名称
+									name: ["日期"],
+									// 3.坐标轴名称文字样式
+									nameTextStyle: {},
+									// 4.坐标轴与名字之间的距离
+									nameGap: 10,
+									// 5.坐标轴的名称旋转,角度
+									//								nameRotate: -45,
+									// 6.坐标轴反转,false,true
+									inverse: false,
+									// triggerEvent:false,
+									// 7.坐标轴两遍留白,类目轴与非类目轴中,表现不一样的
+									boundaryGap: true,
+									// 8.坐标轴的线
+
+									//9.坐标轴刻度相关
+
+									// 10.坐标轴刻度的标签
+									//									axisLabel: {
+									//										show: true,
+									//										inside: false,
+									////										rotate: 15,
+									//										margin: 20,
+									//									},
+									//									splitLine: {
+									//										show: true,
+									//									},
+									//									splitArea: {
+									//										interval: "auto",
+									//										show: true,
+									//										areaStyle: {
+									//											color: "#cdebdf"
+									//										}
+									//									},
+									// X轴指示器,
+									axisPointer: {
+										//										show: true,
+										//										type: "shadow",
+										// 文本
+										label: {
+											show: true,
+											precision: "auto",
+											//											color: "orange"
+											//											fontSize: 20
+										},
+										shadowStyle: {
+											triggerTooltip: true,
+										}
+									},
+									data: ["3/30", "", "", "", "", "", "4/5", "", "", "", "", "", "4/11", "", "", "", "", "", "4/17", "", "", "", "", "", "4/23", "今天"]
+								},
+								yAxis: {
+									name: ["步数(步)"],
+									min: 0,
+									max: 24000,
+									splitNumber: 8,
+									triggerEvent: false,
+									// type:"value",
+									// axisLabel:{
+									// 	formatter:'{value}'
+									// }
+								},
+								series: [{
+									data: [19200, 11050, 20280, 4970, 1500, 9019,
+										19500, 21360, 12300, 8920, 9000, 9060,
+										3100, 8960, 16100, 18220, 19140, 9860,
+										3100, 8960, 6100, 4720, 9140, 11860, 8500,
+										21360
+									],
+									type: 'bar',
+									color: '#c9e4ff'
+
+								}]
+							}
+
+							myChart.setOption(options);
+						</script>
+					</div>
+				</div>
+			</div>
+			<nav class="mui-bar mui-bar-tab yjBtm">
+				<a class="mui-tab-item mui-active">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-phone"></span>
+					<span class="mui-tab-label">运动</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-email"></span>
+					<span class="mui-tab-label">发现</span>
+				</a>
+				<a class="mui-tab-item">
+					<span class="mui-icon mui-icon-person"></span>
+					<span class="mui-tab-label">我的</span>
+				</a>
+			</nav>
+
+		</div>
+
+		<script src="js/mui.min.js"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						callback: pulldownRefresh,
+						contentdown: "下拉同步数据", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+						contentover: "松开同步数据", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+						//contentrefresh : "正在刷新...",//可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+						contentrefresh: '正在同步数据...', //刷新过程显示的字
+					},
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+			function pulldownRefresh() {
+				setTimeout(function() {
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+				}, 1500);
+			}
+			var count = 0;
+		</script>
+	</body>
+	<!--手势滑动-->
+	<script type="text/javascript">
+		var swiper = new Swiper('.swiper-container', {
+			//navigation 使用前进后退按钮来控制Swiper切换。
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			pagination: {
+				//分页器容器的css选择器或HTML标签。分页器等组件可以置于container之外，
+				//不同Swiper的组件应该有所区分，如#pagination1，#pagination2。
+				el: '.swiper-pagination', //el  获取分页器的css选择器
+				clickable: true,
+			},
+		});
+	</script>
+
+</html>

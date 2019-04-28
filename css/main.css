@@ -1,0 +1,96 @@
+body{
+	background: #fff;
+}
+.yjMain h1 a:nth-child(1) span{
+	/*vertical-align: middle;*/
+	line-height: 40px;
+	font-size: 40px;
+	color: #666;
+	padding-left: 10px;
+	/*background: red;*/
+}
+.yjMain h1 a:nth-child(3) span{
+	display: block;
+	/*vertical-align: middle;*/
+	line-height: 40px;
+	font-size: 40px;
+	color: #000;
+	/*background: red;*/
+}
+.yjMain h1 a:nth-child(2)>img{
+	/*display: inline-block;*/
+	/*line-height: 40px;*/
+	position: relative;
+	top: 5px;
+}
+.yjMain h1 a:nth-child(4)>img{
+	/*display: inline-block;*/
+	/*line-height: 40px;*/
+	position: relative;
+	top: 10px;
+	margin-right: 10px;
+}
+.yjBtm{
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	background: #fff;
+}
+.yjBtm a:hover{
+	color: red;
+}
+.yjImg{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+.yjImg img{
+	display: block;
+	width: 100%;
+	margin: 5px auto;
+}
+.yjBushu{
+	width: 100%;
+	/*background: red;*/
+	height: 40px;
+	line-height: 40px;
+	/*font-size: 20px;*/
+	/*display: flex;*/
+}
+.yjBushu p{
+	float: left;
+	padding-left: 10px;
+	color: #000;
+	/*font-size: 20px;*/
+}
+.yjBushu a{
+	color: #666;
+}
+.yjBushu a span{
+	position: relative;
+	top: 8px;
+	padding-right: 10px;
+}
+.yjBox{
+	background: #fff;
+	margin-top: 15px;
+}
+.yjLi ul{
+	width: 100%;
+	display: flex;
+	flex: 1;
+	list-style: none;
+}
+.yjLi ul li{
+	flex: 1;
+	text-align: center;
+}
+.yjLi ul p{
+	color: #000;
+	font-weight: 700;
+}
+.yjLi ul i{
+	display: inline-block;
+	height: 40px;
+	border-left: 1px solid #000;
+}

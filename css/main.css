@@ -94,3 +94,96 @@ body{
 	height: 40px;
 	border-left: 1px solid #000;
 }
+.yjBox p{
+	width: 100%;
+	padding-left: 30px;
+	/*text-align: center;*/
+}
+.yjCon{
+	background: #fff;
+}
+.yjImgBox{
+	text-align: center;
+}
+.yjImgBox a{
+	display: block;
+}
+.yjBar a{
+	color: #000;
+	font-size: 50px;
+	
+}
+.yjLeft{
+	line-height: 35px;
+	margin-left: 15px;
+}
+.yjTuijian{
+	margin-top: 20px;
+	background: #fff;
+}
+.yjTuijian p{
+	padding-left: 20px;
+}
+.yjImgs{
+	text-align: center;
+}
+.yjKecheng{
+	background: #fff;
+}
+.yjKecheng>p{
+	margin-top: -20px;
+	padding-left: 15px;
+	padding-right: 15px;
+	color: #000;
+}
+.yjKecheng p a{
+	color: #000;
+}
+.yjUl{
+	/*display: flex;*/
+	width: 100%;
+	height: 100px;
+	background: #fff;
+	margin-left: -12px;
+	list-style: none;
+	text-align: center;
+	justify-content: space-around;
+}
+.yjUl li{
+	/*flex: 1;*/
+	display: block;
+	width: 40px;
+	height: 40px;
+	float: left;
+	margin: 0 13px;
+	line-height: 40px;
+	/*display: flex;*
+	/*width: 100%;*/
+	border: 1px solid #666;
+	border-radius: 50%;
+}
+.yjImgss{
+	height: 150px;
+	background: #fff;
+	text-align: center;
+	margin-top: 15px;
+}
+.yjBot{
+	margin-bottom: 50px;
+}
+.yjAi{
+	margin-top: 45px;
+}
+.yjFloat{
+	text-align: center;
+	list-style: none;
+}
+.yjFloat li img{
+	margin: 2px 2px;
+}
+.yjAii{
+	text-align: center;
+}
+.yjAii img{
+	margin-top: 15px;
+}

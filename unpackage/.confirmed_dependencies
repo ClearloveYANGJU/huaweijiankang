@@ -1,0 +1,84 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "pullrefresh_sub.html"
+    ],
+    "refer": [
+      "faxian.html",
+      "paobu.html",
+      "huaweidenglu.html",
+      "wode.html",
+      "pullrefresh_sub.html"
+    ]
+  },
+  "faxian.html": {
+    "resources": [
+      "img/saishi06.png",
+      "img/saishi04.png",
+      "img/lunbo01.png",
+      "img/jianzou01.png",
+      "img/saishi03.png",
+      "img/saishu05.png",
+      "img/saishi01.png",
+      "img/jianzou02.png",
+      "img/jianzou04.png",
+      "img/saishi02.png",
+      "img/saishi07.png",
+      "img/lunbo02.png",
+      "img/jianzou03.png"
+    ]
+  },
+  "paobu.html": {
+    "resources": [
+      "img/qixing01.png",
+      "img/kecheng01.png",
+      "img/paobu.png",
+      "img/gl02.png",
+      "img/gl03.png",
+      "img/gl01.png",
+      "img/kecheng02.png"
+    ]
+  },
+  "huaweidenglu.html": {
+    "resources": [
+      "css/huaweidenglu.css",
+      "img/huaweitu.png",
+      "img/erweima.png"
+    ]
+  },
+  "wode.html": {
+    "resources": [
+      "img/wode.png",
+      "img/xunzhang00.png",
+      "img/jilu02.png",
+      "img/jilu01.png",
+      "img/jilu03.png"
+    ]
+  },
+  "pullrefresh_sub.html": {
+    "resources": [
+      "css/main.css",
+      "img/kk.png",
+      "js/swiper.min.js",
+      "img/03.png",
+      "img/04.png",
+      "img/shuju.png",
+      "img/lv.png",
+      "img/yundong.png",
+      "img/07.png",
+      "img/02.png",
+      "js/echarts.min.js",
+      "img/jiankang02.png",
+      "img/jiankang03.png",
+      "js/jquery-1.11.1.min.js",
+      "img/05.png",
+      "img/06.png",
+      "css/swiper.min.css",
+      "img/jiankang01.png",
+      "img/01.png"
+    ]
+  }
+}

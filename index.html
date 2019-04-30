@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+	</head>
+
+	<body>		
+		<nav class="mui-bar mui-bar-tab yjBtm" id="nav-tabbar">
+				<a class="mui-tab-item mui-active" id="pullrefresh_sub">
+					<span class="mui-icon mui-icon-home"></span>
+					<span class="mui-tab-label">首页</span>
+				</a>
+				<a class="mui-tab-item" id="paobu">
+					<span class="mui-icon mui-icon-phone"></span>
+					<span class="mui-tab-label">运动</span>
+				</a>
+				<a class="mui-tab-item" id="faxian">
+					<span class="mui-icon mui-icon-email"></span>
+					<span class="mui-tab-label">发现</span>
+				</a>
+				<a class="mui-tab-item" id="wode">
+					<span class="mui-icon mui-icon-person"></span>
+					<span class="mui-tab-label">我的</span>
+				</a>
+				<a class="mui-tab-item" id="huaweidenglu">
+					<span class="mui-icon mui-icon-person"></span>
+					<span class="mui-tab-label">
+						登录
+					</span>
+				</a>
+			</nav>
+	</body>
+	
+	<script type="text/javascript">
+		var defaultpage = "pullrefresh_sub.html";	// 定义默认选项卡子页面
+		
+		// 定义所有子页面
+		var subpages = ['pullrefresh_sub.html', 'paobu.html', 'faxian.html','wode.html','huaweidenglu.html'];
+		
+		// 页面加载完成后加载子页面
+		mui.plusReady(function(){
+			var current =  plus.webview.currentWebview();	//获取当前页面的窗口对象
+			
+			// 加载所有子页面
+			for(var i =0;i<6;i++){
+				var sub = plus.webview.create(
+					subpages[i], 
+                    subpages[i], 
+                    {
+                        top: '0px', 
+                        bottom: '50px' 
+                    }
+				);
+				// 除默认页面外，其他子页面隐藏
+				if(subpages[i] != defaultpage){
+					sub.hide();
+				}
+				current.append(sub);	// 子页面加入窗口对象
+			}
+		});
+		
+		// 创建点击事件
+		mui("#nav-tabbar").on("tap","a",function(e){
+			plus.webview.hide(defaultpage);		// 隐藏上一个子页面
+			plus.webview.show(this.id + ".html")	// 显示当前点击页面
+			defaultpage = this.id + ".html";	// 记录当前点击页面
+		})
+	
+	
+//		//启用双击监听
+//		mui.init({
+//			gestureConfig:{
+//				doubletap:true
+//			},
+//			subpages:[{ 
+//				url:'pullrefresh_sub.html',
+//				id:'pullrefresh_sub.html',
+//				styles:{
+//					top: '0px',
+//					bottom: '0px', 				
+//				}
+//			}] 
+//		});
+//	
+//		var contentWebview = null;
+//		document.querySelector('header').addEventListener('doubletap',function () {
+//			if(contentWebview==null){
+//				contentWebview = plus.webview.currentWebview().children()[0];
+//			}
+//			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+//		});
+		
+	</script>
+	
+
+</html>
